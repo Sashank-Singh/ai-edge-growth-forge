@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				legac: {
+					blue: '#0EA5E9',
+					darkblue: '#0C4A6E',
+					teal: '#0D9488',
+					purple: '#8B5CF6',
+					slate: '#1E293B',
+					gray: '#64748B',
+					lightgray: '#F1F5F9',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,34 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: 1
+					},
+					'50%': {
+						opacity: 0.8
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(to bottom right, rgba(14, 165, 233, 0.1), rgba(139, 92, 246, 0.1))',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'blue-purple-gradient': 'linear-gradient(90deg, #0EA5E9 0%, #8B5CF6 100%)',
 			}
 		}
 	},
